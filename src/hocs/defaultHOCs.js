@@ -2,7 +2,7 @@
 
 import React from "react";
 import { connect } from "react-redux";
-import { setBooks } from "redux/modules/books";
+import { getBooks } from "redux/modules/books";
 import books from "books.json"
 
 type Props = {
@@ -12,10 +12,7 @@ type Props = {
 const defaultHOCs = (ComposedComponent: Function) => {
 
   const component = (props: Props) => {
-    setTimeout(() => {props.dispatch(setBooks(books));}, 2000);
-
-
-    console.log('loaded');
+    setTimeout(() => {props.dispatch(getBooks(books));}, 2000);
     return <ComposedComponent {...props} />;
   };
 

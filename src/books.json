@@ -1,5 +1,106 @@
 [
   {
+    "id": 11,
+    "title": "Flex on Java",
+    "isbn": "1933988797",
+    "pageCount": 265,
+    "publishedDate": {
+      "$date": "2010-10-15T00:00:00.000-0700"
+    },
+    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/allmon.jpg",
+    "shortDescription": "   A beautifully written book that is a must have for every Java Developer.       Ashish Kulkarni, Technical Director, E-Business Software Solutions Ltd.",
+    "longDescription": "In the demo, a hip designer, a sharply-dressed marketer, and a smiling, relaxed developer sip lattes and calmly discuss how Flex is going to make customers happy and shorten the workday   all while boosting the bottom line. The software systems they're using have been carefully selected and built from the ground up to work together seamlessly. There are no legacy systems, data, or competing business concerns to manage.    Cut to reality.    You're a Java developer. The marketing guy tells you that \"corporate\" wants a Flex-based site and you have to deliver it on top of what you already have. Your budget  Don't even ask. \"Make it look like the Discovery channel or something.\"    Flex on Java assumes you live in the real world   not the demo. This unique book shows you how to refactor an existing web application using the server-side you already know. You'll learn to use Flex 3 in concert with Spring, EJB 3, POJOs, JMS, and other standard technologies. Wherever possible, the examples use free or open source software.    The authors start with a typical Java web app and show you how to add a rich Flex interface. You also learn how to integrate Flex into your server-side Java via the BlazeDS framework, Adobe's open-source remoting and web messaging technology for Flex.    The book shows you how to deploy to not only the web but also to the desktop using the Adobe Integrated Runtime (AIR). You will learn how to integrate Flex into your existing applications in order to build a next generation application that will delight users.    Flex on Java is approachable for anyone beginning Java and Flex development.    ",
+    "status": "PUBLISH",
+    "authors": [
+      "Bernerd Allmon",
+      "Jeremy Anderson"
+    ],
+    "categories": [
+      "Internet"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Ruby for Rails",
+    "isbn": "1932394699",
+    "pageCount": 532,
+    "publishedDate": {
+      "$date": "2006-05-01T00:00:00.000-0700"
+    },
+    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/black.jpg",
+    "shortDescription": "The word is out: with Ruby on Rails you can build powerful Web applications easily and quickly! And just like the Rails framework itself, Rails applications are Ruby programs. That means you can   t tap into the full power of Rails unless you master the Ruby language.",
+    "longDescription": "Ruby for Rails helps Rails developers achieve Ruby mastery. Each chapter deepens your Ruby knowledge and shows you how it connects to Rails. You   ll gain confidence working with objects and classes and learn how to leverage Ruby   s elegant, expressive syntax for Rails application power. And you'll become a better Rails developer through a deep understanding of the design of Rails itself and how to take advantage of it.    Newcomers to Ruby will find a Rails-oriented Ruby introduction that   s easy to read and that includes dynamic programming techniques, an exploration of Ruby objects, classes, and data structures, and many neat examples of Ruby and Rails code in action.    Ruby for Rails: the Ruby guide for Rails developers!",
+    "status": "PUBLISH",
+    "authors": [
+      "David A. Black"
+    ],
+    "categories": [
+      "Web Development"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "The Well-Grounded Rubyist",
+    "isbn": "1933988657",
+    "pageCount": 520,
+    "publishedDate": {
+      "$date": "2009-04-01T00:00:00.000-0700"
+    },
+    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/black2.jpg",
+    "shortDescription": "What would appear to be the most complex topic of the book is in fact surprisingly easy to assimilate, and one realizes that the efforts of the author to gradually lead us to a sufficient knowledge of Ruby in order to tackle without pain the most difficult subjects, bears its fruit.       Eric Grimois, Developpez.com",
+    "longDescription": "Interest in Ruby has exploded. Developers discovering this elegant, dynamic language quickly learn that Ruby is a powerful alternative to traditional static languages like Java or C++. It runs in most operating environments and can handle virtually any programming task you throw at it. Ruby code is clean and elegant. Best of all, Ruby is dynamic, which means that it's designed to react at runtime to changes in an application's environment or requirements.    The Well-Grounded Rubyist takes you from interested novice to proficient practitioner. It's a beautifully written tutorial that begins with the basic steps to get your first Ruby program up and running and goes on to explore sophisticated topics like callable objects, reflection, and threading The book concentrates on the language, preparing you for any way you may choose to use Ruby. Whether the topic is simple or tough, the book's easy-to-follow examples and explanations give you immediate confidence as you build your Ruby programming skills.    The Well-Grounded Rubyist is a thoroughly revised and updated edition of the best-selling Ruby for Rails. In this new book, expert author David A. Black moves beyond Rails and presents a broader view of Ruby. It covers Ruby 1.9, and keeps the same sharp focus and clear writing that made Ruby for Rails stand out.    It's no wonder one reader commented: \"The technical depth is just right to not distract beginners, yet detailed enough for more advanced readers.\"",
+    "status": "PUBLISH",
+    "authors": [
+      "David A. Black"
+    ],
+    "categories": [
+      "Programming"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Website Owner's Manual",
+    "isbn": "1933988452",
+    "pageCount": 296,
+    "publishedDate": {
+      "$date": "2009-10-01T00:00:00.000-0700"
+    },
+    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/boag.jpg",
+    "shortDescription": "Website Owner's Manual helps you form a vision for your site, guides you through the process of selecting a web design agency, and gives you enough background information to make intelligent decisions throughout the development process. This book provides a jargon-free overview of web design, including accessibility, usability, online marketing, and web development techniques. You'll gain a practical understanding of the technologies, processes, and ideas that drive a successful website.",
+    "longDescription": "Just because you're responsible for your organization's web presence doesn't mean you know how to build a website. The job of planning, launching, and managing a site often falls to people who have little or no experience in web design or development. Website Owner's Manual is a book for the thousands of marketers, IT managers, project leaders, and business owners who need to put a website in place and keep it running with a minimum of trouble.    Website Owner's Manual helps you form a vision for your site, guides you through the process of selecting a web design agency, and gives you enough background information to make intelligent decisions throughout the development process. This book provides a jargon-free overview of web design, including accessibility, usability, online marketing, and web development techniques. You'll gain a practical understanding of the technologies, processes, and ideas that drive a successful website.",
+    "status": "PUBLISH",
+    "authors": [
+      "Paul A. Boag"
+    ],
+    "categories": [
+      "Internet"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "ASP.NET 4.0 in Practice",
+    "isbn": "1935182463",
+    "pageCount": 504,
+    "publishedDate": {
+      "$date": "2011-05-15T00:00:00.000-0700"
+    },
+    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/bochicchio.jpg",
+    "shortDescription": "ASP.NET 4.0 in Practice contains real world techniques from well-known professionals who have been using ASP.NET since the first previews.",
+    "longDescription": "ASP.NET is an established technology to build web applications using Microsoft products. It drives a number of enterprise-level web sites around the world, but it can be scaled for projects of any size. The new version 4.0 is an evolutionary step: you will find a lot of new features that you will be able to leverage to build better web applications with minimal effort.    ASP.NET 4.0 in Practice contains real world techniques from well-known professionals who have been using ASP.NET since the first previews. Using a practical Problem-Solution-Discussion format, it will guide you through the most common scenarios you will face in a typical ASP.NET application, and provide solutions and suggestions to take your applications to another level.",
+    "status": "PUBLISH",
+    "authors": [
+      "Daniele Bochicchio",
+      "Stefano Mostarda",
+      "",
+      "Marco De Sanctis"
+    ],
+    "categories": [
+      "Microsoft .NET"
+    ]
+  },
+
+  {
+    "id": 29,
     "title": "Unlocking Android",
     "isbn": "1933988673",
     "pageCount": 416,
@@ -21,6 +122,45 @@
     ]
   },
   {
+    "id": 31,
+    "title": "Building Secure and Reliable Network Applications",
+    "isbn": "1884777295",
+    "pageCount": 591,
+    "publishedDate": {
+      "$date": "1996-01-01T00:00:00.000-0800"
+    },
+    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/birman.jpg",
+    "shortDescription": "\"... tackles the difficult problem of building reliable distributed computing systems in a way that not only presents the principles but also describes proven practical solutions.\" --John Warne, BNR Europe",
+    "longDescription": "As the \"network is the computer\" slogan becomes reality so reliability and security of networked applications become more important. Not only are hospitals, air traffic control systems, and telephone networks becoming more networked, but business applications are increasingly based on the open world of the Internet. Stability in the face of minor accidents, software or hardware failures, or outright attack has become vital. This book provides a structured approach to the technologies currently available for building reliable solutions to these problems.    Building Secure and Reliable Network Applications reviews the most important network technologies from a security and reliability perspective and discusses the most effective solutions with an eye towards their application to real-world systems. Any computing professional who works with networked software will find this book valuable in understanding security and reliability vulnerabilities and how to address them.",
+    "status": "PUBLISH",
+    "authors": [
+      "Kenneth P. Birman"
+    ],
+    "categories": [
+      "Networking",
+      "Theory"
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Distributed Application Development with PowerBuilder 6.0",
+    "isbn": "1884777686",
+    "pageCount": 504,
+    "publishedDate": {
+      "$date": "1998-06-01T00:00:00.000-0700"
+    },
+    "shortDescription": "Distributed Application Development with PowerBuilder 6.0 is a vital source for the PowerBuilder programmer; it provides the sort of detailed coverage of Distributed PowerBuilder that you can find nowwhere else. ",
+    "longDescription": "Distributed Application Development with PowerBuilder 6.0 is a vital source for the PowerBuilder programmer; it provides the sort of detailed coverage of Distributed PowerBuilder that you can find nowwhere else.    The book opens with a discussion of distributed computing in general, as well as its design principles and technologies. Then Distributed PowerBuilder is examined in detail. By building a simple application step by step, the author discusses all of the concepts and components needed for building a PowerBuilder application and shows how to make the application available over a network.    Finally, the author explores how PowerBuilder can be used in distributed solutions both with and without using DPB.    Distributed Application Development with PowerBuilder 6.0 is for any PowerBuilder developer looking for information on distributed computing options with the PowerBuilder environment. IS managers, system architects, and developers using many different technologies can learn how PowerBuilder can be used as all or part of the solution for building distributed applications.    The main topic of this book is Distributed PowerBuilder (DPB). It covers the basics of building a DPB application and walks through each new feature with examples including the Shared object, DataWindow synchronization, Server Push and Web.PB. It also explains distributed computing technologies and design principles so that your application can be built to handle the stresses of a distributed environment.  ",
+    "status": "PUBLISH",
+    "authors": [
+      "Michael J. Barlotta"
+    ],
+    "categories": [
+      "PowerBuilder"
+    ]
+  },
+  {
+    "id": 19,
     "title": "Android in Action, Second Edition",
     "isbn": "1935182722",
     "pageCount": 592,
@@ -40,6 +180,27 @@
     ]
   },
   {
+    "id": 33,
+    "title": "jQuery in Action, Second Edition",
+    "isbn": "1935182323",
+    "pageCount": 488,
+    "publishedDate": {
+      "$date": "2010-06-01T00:00:00.000-0700"
+    },
+    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/bibeault2.jpg",
+    "shortDescription": "jQuery in Action, Second Edition is a fast-paced introduction to jQuery that will take your JavaScript programming to the next level. An in-depth rewrite of the bestselling first edition, this edition provides deep and practical coverage of the latest jQuery and jQuery UI releases. The book's unique \"lab pages\" anchor the explanation of each new concept in a practical example. You'll learn how to traverse HTML documents, handle events, perform animations, and add Ajax to your web pages. This comprehensive guide also teaches you how jQuery interacts with other tools and frameworks and how to build jQuery plugins. ",
+    "longDescription": "A really good web development framework anticipates your needs. jQuery does more   it practically reads your mind. Developers fall in love with this JavaScript library the moment they see 20 lines of code reduced to three. jQuery is concise and readable. Its unique \"chaining\" model lets you perform multiple operations on a page element in succession. And with version 1.4, there's even more to love about jQuery, including new effects and events, usability improvements, and more testing options.    jQuery in Action, Second Edition is a fast-paced introduction and guide. Building on the bestselling first edition, it adds new examples, more labs, and deeper explanations of important features. You   ll learn how to traverse HTML documents, handle events, perform animations, and add Ajax to your web pages. The book's unique \"lab pages\" anchor the explanation of each new concept in a practical example. You'll learn how jQuery interacts with other tools and frameworks and how to build jQuery plugins. This book requires a modest knowledge of JavaScript and Ajax.",
+    "status": "PUBLISH",
+    "authors": [
+      "Bear Bibeault",
+      "Yehuda Katz"
+    ],
+    "categories": [
+      "Java"
+    ]
+  },
+  {
+    "id": 39,
     "title": "Specification by Example",
     "isbn": "1617290084",
     "pageCount": 0,
@@ -56,6 +217,7 @@
     ]
   },
   {
+    "id": 40,
     "title": "Flex 3 in Action",
     "isbn": "1933988746",
     "pageCount": 576,
@@ -74,6 +236,7 @@
     ]
   },
   {
+    "id": 42,
     "title": "Flex 4 in Action",
     "isbn": "1935182420",
     "pageCount": 600,
@@ -94,23 +257,7 @@
     ]
   },
   {
-    "title": "Collective Intelligence in Action",
-    "isbn": "1933988312",
-    "pageCount": 425,
-    "publishedDate": {
-      "$date": "2008-10-01T00:00:00.000-0700"
-    },
-    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/alag.jpg",
-    "longDescription": "There's a great deal of wisdom in a crowd, but how do you listen to a thousand people talking at once  Identifying the wants, needs, and knowledge of internet users can be like listening to a mob.    In the Web 2.0 era, leveraging the collective power of user contributions, interactions, and feedback is the key to market dominance. A new category of powerful programming techniques lets you discover the patterns, inter-relationships, and individual profiles   the collective intelligence   locked in the data people leave behind as they surf websites, post blogs, and interact with other users.    Collective Intelligence in Action is a hands-on guidebook for implementing collective-intelligence concepts using Java. It is the first Java-based book to emphasize the underlying algorithms and technical implementation of vital data gathering and mining techniques like analyzing trends, discovering relationships, and making predictions. It provides a pragmatic approach to personalization by combining content-based analysis with collaborative approaches.    This book is for Java developers implementing collective intelligence in real, high-use applications. Following a running example in which you harvest and use information from blogs, you learn to develop software that you can embed in your own applications. The code examples are immediately reusable and give the Java developer a working collective intelligence toolkit.    Along the way, you work with, a number of APIs and open-source toolkits including text analysis and search using Lucene, web-crawling using Nutch, and applying machine learning algorithms using WEKA and the Java Data Mining (JDM) standard.",
-    "status": "PUBLISH",
-    "authors": [
-      "Satnam Alag"
-    ],
-    "categories": [
-      "Internet"
-    ]
-  },
-  {
+    "id": 44,
     "title": "Zend Framework in Action",
     "isbn": "1933988320",
     "pageCount": 432,
@@ -131,25 +278,7 @@
     ]
   },
   {
-    "title": "Flex on Java",
-    "isbn": "1933988797",
-    "pageCount": 265,
-    "publishedDate": {
-      "$date": "2010-10-15T00:00:00.000-0700"
-    },
-    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/allmon.jpg",
-    "shortDescription": "   A beautifully written book that is a must have for every Java Developer.       Ashish Kulkarni, Technical Director, E-Business Software Solutions Ltd.",
-    "longDescription": "In the demo, a hip designer, a sharply-dressed marketer, and a smiling, relaxed developer sip lattes and calmly discuss how Flex is going to make customers happy and shorten the workday   all while boosting the bottom line. The software systems they're using have been carefully selected and built from the ground up to work together seamlessly. There are no legacy systems, data, or competing business concerns to manage.    Cut to reality.    You're a Java developer. The marketing guy tells you that \"corporate\" wants a Flex-based site and you have to deliver it on top of what you already have. Your budget  Don't even ask. \"Make it look like the Discovery channel or something.\"    Flex on Java assumes you live in the real world   not the demo. This unique book shows you how to refactor an existing web application using the server-side you already know. You'll learn to use Flex 3 in concert with Spring, EJB 3, POJOs, JMS, and other standard technologies. Wherever possible, the examples use free or open source software.    The authors start with a typical Java web app and show you how to add a rich Flex interface. You also learn how to integrate Flex into your server-side Java via the BlazeDS framework, Adobe's open-source remoting and web messaging technology for Flex.    The book shows you how to deploy to not only the web but also to the desktop using the Adobe Integrated Runtime (AIR). You will learn how to integrate Flex into your existing applications in order to build a next generation application that will delight users.    Flex on Java is approachable for anyone beginning Java and Flex development.    ",
-    "status": "PUBLISH",
-    "authors": [
-      "Bernerd Allmon",
-      "Jeremy Anderson"
-    ],
-    "categories": [
-      "Internet"
-    ]
-  },
-  {
+    "id": 50,
     "title": "Griffon in Action",
     "isbn": "1935182234",
     "pageCount": 375,
@@ -171,6 +300,7 @@
     ]
   },
   {
+    "id": 58,
     "title": "OSGi in Depth",
     "isbn": "193518217X",
     "pageCount": 325,
@@ -189,6 +319,7 @@
     ]
   },
   {
+    "id": 61,
     "title": "Flexible Rails",
     "isbn": "1933988509",
     "pageCount": 592,
@@ -207,6 +338,7 @@
     ]
   },
   {
+    "id": 64,
     "title": "Hello! Flex 4",
     "isbn": "1933988762",
     "pageCount": 258,
@@ -225,6 +357,7 @@
     ]
   },
   {
+    "id": 68,
     "title": "Coffeehouse",
     "isbn": "1884777384",
     "pageCount": 316,
@@ -244,23 +377,7 @@
     ]
   },
   {
-    "title": "Team Foundation Server 2008 in Action",
-    "isbn": "1933988592",
-    "pageCount": 344,
-    "publishedDate": {
-      "$date": "2008-12-01T00:00:00.000-0800"
-    },
-    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/azher.jpg",
-    "longDescription": "In complex software projects, managing the development process can be as critical to success as writing the code itself. A project may involve dozens of developers, managers, architects, testers, and customers, hundreds of builds, and thousands of opportunities to get off-track. To keep tabs on the people, tasks, and components of a medium- to large-scale project, most teams use a development system that allows for easy monitoring, follow-up, and accountability.    Microsoft Team Foundation Server 2008 (TFS), the server component of Microsoft's Visual Studio Team System (VSTS), provides a powerful collaborative platform for software-development teams. The product offers an integrated toolset for tracking work items, creating test cases, managing source code, generating builds, constructing database schemas, and so on. Because in software development one size does not fit all, TFS provides process customization, project management, and reporting capabilities to build solutions around your requirements.    Team Foundation Server 2008 in Action is a hands-on guide to Team Foundation Server 2008. Written for developers with a good handle on TFS basics, this book shows you how to solve real-life problems. It's not a repetition of Microsoft's product documentation. Team Foundation Server 2008 in Action is a practitioner's handbook for how to work with TFS under common constraints. This book walks you through real-life software engineering problems based on hundreds of hours of TFS experience.    You'll benefit from expert author Jamil Azher's extensive interactions with members of Microsoft's TFS team and MVPs, survey feedback from the author's blog, and interviews with organizations and user groups using TFS. Instead of just offering a high-level overview, the book provides detailed solutions for solving common   and not-so-common   problems using TFS. It discusses the strengths as well as weaknesses of TFS, and suggests appropriate problem resolution steps, workarounds, or custom solutions.",
-    "status": "PUBLISH",
-    "authors": [
-      "Jamil Azher"
-    ],
-    "categories": [
-      "Microsoft .NET"
-    ]
-  },
-  {
+    "id": 72,
     "title": "Brownfield Application Development in .NET",
     "isbn": "1933988711",
     "pageCount": 550,
@@ -280,6 +397,7 @@
     ]
   },
   {
+    "id": 73,
     "title": "MongoDB in Action",
     "isbn": "1935182870",
     "pageCount": 0,
@@ -298,41 +416,7 @@
     ]
   },
   {
-    "title": "Distributed Application Development with PowerBuilder 6.0",
-    "isbn": "1884777686",
-    "pageCount": 504,
-    "publishedDate": {
-      "$date": "1998-06-01T00:00:00.000-0700"
-    },
-    "longDescription": "Distributed Application Development with PowerBuilder 6.0 is a vital source for the PowerBuilder programmer; it provides the sort of detailed coverage of Distributed PowerBuilder that you can find nowwhere else.    The book opens with a discussion of distributed computing in general, as well as its design principles and technologies. Then Distributed PowerBuilder is examined in detail. By building a simple application step by step, the author discusses all of the concepts and components needed for building a PowerBuilder application and shows how to make the application available over a network.    Finally, the author explores how PowerBuilder can be used in distributed solutions both with and without using DPB.    Distributed Application Development with PowerBuilder 6.0 is for any PowerBuilder developer looking for information on distributed computing options with the PowerBuilder environment. IS managers, system architects, and developers using many different technologies can learn how PowerBuilder can be used as all or part of the solution for building distributed applications.    The main topic of this book is Distributed PowerBuilder (DPB). It covers the basics of building a DPB application and walks through each new feature with examples including the Shared object, DataWindow synchronization, Server Push and Web.PB. It also explains distributed computing technologies and design principles so that your application can be built to handle the stresses of a distributed environment.  ",
-    "status": "PUBLISH",
-    "authors": [
-      "Michael J. Barlotta"
-    ],
-    "categories": [
-      "PowerBuilder"
-    ]
-  },
-  {
-    "title": "Jaguar Development with PowerBuilder 7",
-    "isbn": "1884777864",
-    "pageCount": 550,
-    "publishedDate": {
-      "$date": "1999-08-01T00:00:00.000-0700"
-    },
-    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/barlotta2.jpg",
-    "shortDescription": "Jaguar Development with PowerBuilder 7 is the definitive guide to distributed application development with PowerBuilder. It is the only book dedicated to preparing PowerBuilder developers for Jaguar applications and has been approved by Sybase engineers and product specialists who build the tools described in the book.",
-    "longDescription": "Jaguar Development with PowerBuilder 7 is the definitive guide to distributed application development with PowerBuilder. It is the only book dedicated to preparing PowerBuilder developers for Jaguar applications and has been approved by Sybase engineers and product specialists who build the tools described in the book.    Jaguar Development with PowerBuilder 7 focuses on getting you up to speed on Jaguar and PowerBuilder, and it is packed with code samples to guide you every step of the way. It covers each step involved in application development, from setting up the development environment to deploying a production application.    Even a PowerBuilder developer with no experience in distributed technologies or Jaguar CTS will learn what it takes to build an application. Jaguar Development with PowerBuilder 7 covers:    Developing Component-centric Applications  Building Jaguar CTS Components/Clients  CORBA  Adaptive SQL Anywhere  Adaptive Server Enterprise  and lots more!",
-    "status": "PUBLISH",
-    "authors": [
-      "Michael Barlotta"
-    ],
-    "categories": [
-      "PowerBuilder",
-      "Client-Server"
-    ]
-  },
-  {
+    "id": 75,
     "title": "Taming Jaguar",
     "isbn": "1884777686",
     "pageCount": 362,
@@ -351,24 +435,7 @@
     ]
   },
   {
-    "title": "3D User Interfaces with Java 3D",
-    "isbn": "1884777902",
-    "pageCount": 520,
-    "publishedDate": {
-      "$date": "2000-08-01T00:00:00.000-0700"
-    },
-    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/barrilleaux.jpg",
-    "longDescription": "3D User Interfaces with Java 3D is a practical guide for providing next-generation applications with 3D user interfaces for manipulation of in-scene objects. Emphasis is on standalone and web-based business applications, such as for online sales and mass customization, but much of what this book offers has broad applicability to 3D user interfaces in other pursuits such as scientific visualization and gaming.  This book provides an extensive conceptual framework for 3D user interface techniques, and an in-depth introduction to user interface support in the Java 3D API, including such topics as picking, collision, and drag-and-drop. Many of the techniques are demonstrated in a Java 3D software framework included with the book, which also provides developers with many general-purpose building blocks for constructing their own user interfaces.    Applications and their use of 3D are approached realistically. The book is geared towards sophisticated user interfaces for the \"everyday user\" who doesn't have a lot of time to learn another application--much less a complicated one--and an everyday computer system without exotic devices like head mounted displays and data gloves. Perhaps the best description of this book is: \"A roadmap from Java 3D to 'Swing 3D'.\"",
-    "status": "PUBLISH",
-    "authors": [
-      "Jon Barrilleaux"
-    ],
-    "categories": [
-      "Java",
-      "Computer Graphics"
-    ]
-  },
-  {
+    "id": 77,
     "title": "Hibernate in Action",
     "isbn": "193239415X",
     "pageCount": 400,
@@ -388,7 +455,9 @@
     ]
   },
   {
+    "id": 80,
     "title": "Hibernate in Action (Chinese Edition)",
+    "isbn": "193239415XCH",
     "pageCount": 400,
     "publishedDate": {
       "$date": "1999-06-01T00:00:00.000-0700"
@@ -404,6 +473,7 @@
     ]
   },
   {
+    "id": 101,
     "title": "Java Persistence with Hibernate",
     "isbn": "1932394885",
     "pageCount": 880,
@@ -423,6 +493,7 @@
     ]
   },
   {
+    "id": 103,
     "title": "JSTL in Action",
     "isbn": "1930110529",
     "pageCount": 480,
@@ -440,6 +511,7 @@
     ]
   },
   {
+    "id": 106,
     "title": "iBATIS in Action",
     "isbn": "1932394826",
     "pageCount": 384,
@@ -460,6 +532,7 @@
     ]
   },
   {
+    "id": 123,
     "title": "Designing Hard Software",
     "isbn": "133046192",
     "pageCount": 350,
@@ -478,6 +551,7 @@
     ]
   },
   {
+    "id": 127,
     "title": "Hibernate Search in Action",
     "isbn": "1933988649",
     "pageCount": 488,
@@ -497,6 +571,7 @@
     ]
   },
   {
+    "id": 134,
     "title": "jQuery in Action",
     "isbn": "1933988355",
     "pageCount": 376,
@@ -516,6 +591,7 @@
     ]
   },
   {
+    "id": 135,
     "title": "jQuery in Action, Second Edition",
     "isbn": "1935182323",
     "pageCount": 488,
@@ -535,6 +611,7 @@
     ]
   },
   {
+    "id": 140,
     "title": "Building Secure and Reliable Network Applications",
     "isbn": "1884777295",
     "pageCount": 591,
@@ -554,6 +631,7 @@
     ]
   },
   {
+    "id": 141,
     "title": "Ruby for Rails",
     "isbn": "1932394699",
     "pageCount": 532,
@@ -572,6 +650,7 @@
     ]
   },
   {
+    "id": 144,
     "title": "The Well-Grounded Rubyist",
     "isbn": "1933988657",
     "pageCount": 520,
@@ -590,6 +669,7 @@
     ]
   },
   {
+    "id": 147,
     "title": "Website Owner's Manual",
     "isbn": "1933988452",
     "pageCount": 296,
@@ -608,6 +688,7 @@
     ]
   },
   {
+    "id": 149,
     "title": "ASP.NET 4.0 in Practice",
     "isbn": "1935182463",
     "pageCount": 504,
@@ -621,7 +702,6 @@
     "authors": [
       "Daniele Bochicchio",
       "Stefano Mostarda",
-      "",
       "Marco De Sanctis"
     ],
     "categories": [
