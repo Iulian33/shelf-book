@@ -2,9 +2,11 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import { connect } from "react-redux";
 
 type Props = {
-    children: any
+    children: any,
+    darkMode: boolean
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -17,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         position: relative;
         font-family: "Roboto", sans-serif;
+        background: ${({darkMode}) => (darkMode ? '#1d1d1d' : '#fff')};
     }
     button{
         padding: 0;
@@ -26,6 +29,23 @@ const GlobalStyle = createGlobalStyle`
         background: none;
         &:focus {
             outline: none;
+        }
+    }
+    
+    .custom-select {
+      background: ${({darkMode}) => (darkMode ? '#252525' : '#fff')};
+    }
+    
+    .form-control{
+        ${({darkMode}) =>
+           `background: ${darkMode ? '#252525' : '#fff'};
+            color: ${darkMode ? '#fff' : '#000'};
+        `};
+        &:focus {
+          ${({darkMode}) =>
+            `background: ${darkMode ? '#252525' : '#fff'};
+            color: ${darkMode ? '#fff' : '#000'};
+         `};
         }
     }
     #root{
@@ -41,9 +61,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 const LayoutContainer = (props: Props) => (
     <>
-        <GlobalStyle/>
+        <GlobalStyle darkMode={props.darkMode}/>
         {props.children}
     </>
 );
 
-export default LayoutContainer;
+const mapStateToProps = ({app}) => ({
+    darkMode: app.darkMode,
+});
+
+export default connect(mapStateToProps)(LayoutContainer);

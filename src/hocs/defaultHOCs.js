@@ -6,17 +6,16 @@ import { getBooks } from "redux/modules/books";
 import books from "books.json"
 
 type Props = {
-  dispatch: ({ type: string }) => void
+    dispatch: ({ type: string }) => void
 };
 
 const defaultHOCs = (ComposedComponent: Function) => {
 
-  const component = (props: Props) => {
-    setTimeout(() => {props.dispatch(getBooks(books));}, 2000);
-    return <ComposedComponent {...props} />;
-  };
-
-  return connect()(component);
+    const component = (props: Props) => {
+        props.dispatch(getBooks(books));
+        return <ComposedComponent {...props} />;
+    };
+    return connect()(component);
 };
 
 export default defaultHOCs;

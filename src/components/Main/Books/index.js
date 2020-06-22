@@ -6,9 +6,13 @@ import { Button, Col, Row } from "react-bootstrap";
 import BookPlaceholder from "assets/book-placeholder.png";
 import { toggleModal } from "redux/modules/modal";
 import { setSelectedBook } from "redux/modules/books";
+import type { Book } from "redux/modules/books";
 
 const BookContainer = styled.div`
-  background: #eaf3f7;
+  ${({darkMode}) =>
+    `background: ${darkMode ? '#252525' : '#eaf3f7'};
+     color: ${darkMode ? '#cacaca' : '#000'};
+  `};
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.18);
   padding: 15px 30px;
   display: inline-block;
@@ -45,26 +49,13 @@ const Column = styled(Col)`
   }
 `;
 
-export interface Book {
-    id: number,
-    title: string,
-    isbn: string,
-    pageCount: number,
-    publishedDate: Object,
-    thumbnailUrl: string,
-    shortDescription: string,
-    longDescription: string,
-    status: string,
-    authors: string[],
-    categories: string[]
-}
-
 type State = {
     dispatch: ({ type: string }) => void,
-    books: Book[];
+    books: Book[],
+    darkMode: boolean
 }
 
-const Books = ({books, dispatch}: State) => {
+const Books = ({books, dispatch, darkMode}: State) => {
 
     const onMoreDetails = (book: Book) => {
         dispatch(setSelectedBook(book));
@@ -74,7 +65,7 @@ const Books = ({books, dispatch}: State) => {
     const listBooks = (books: Book[]) => books.map((book, index) => {
         return (
             <Column sm={6} key={index}>
-                <BookContainer>
+                <BookContainer darkMode={darkMode}>
                     <Row>
                         <Col sm={4}>
                             <BookImage src={book.thumbnailUrl || BookPlaceholder} alt="Book Image"/>
@@ -97,8 +88,9 @@ const Books = ({books, dispatch}: State) => {
     );
 };
 
-const mapStateToProps = ({books}) => ({
-    books: books.allBooks
+const mapStateToProps = ({books, app}) => ({
+    books: books.allBooks,
+    darkMode: app.darkMode
 });
 
 export default connect(mapStateToProps)(Books);

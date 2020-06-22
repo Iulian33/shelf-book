@@ -1,14 +1,14 @@
 // @flow
 import React from "react";
 import NewBookModal from "./NewBook";
-import NewShelveModal from "./NewShelve";
 import BookDetailsModal from "./BookDetails";
+import NewShelfModal from "./NewShelf";
 
 const Modals = () => (
     <>
         <BookDetailsModal/>
         <NewBookModal/>
-        <NewShelveModal/>
+        <NewShelfModal/>
     </>
 );
 

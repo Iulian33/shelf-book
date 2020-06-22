@@ -1,14 +1,14 @@
 // @flow
 const CHANGE_THEME = "CHANGE_THEME";
 
-export type Action = { type: typeof CHANGE_THEME, theme: string };
+export type Action = { type: typeof CHANGE_THEME, mode: boolean };
 
 export type State = {
-  theme: string
+  darkMode: boolean
 };
 
 const initialState: State = {
-  theme: "light"
+  darkMode: false
 };
 
 export default function reducer(state: State = initialState, action: Action): State {
@@ -16,7 +16,7 @@ export default function reducer(state: State = initialState, action: Action): St
     case CHANGE_THEME: {
       return {
         ...state,
-        theme: action.theme
+        darkMode: action.mode
       };
     }
 
@@ -26,7 +26,7 @@ export default function reducer(state: State = initialState, action: Action): St
   }
 }
 
-export const changeThemeAction = (theme: string): Action => ({
+export const changeThemeAction = (mode: string): Action => ({
   type: CHANGE_THEME,
-  theme
+  mode
 });

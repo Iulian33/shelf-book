@@ -1,8 +1,20 @@
 // @flow
-import type { Book } from "components/Main/Books";
-
 const GET_BOOKS = "GET_BOOKS";
 const SET_SELECTED_BOOK = "SET_SELECTED_BOOK";
+
+export interface Book {
+    id: number,
+    title: string,
+    isbn: string,
+    pageCount: number,
+    publishedDate: Object,
+    thumbnailUrl: string,
+    shortDescription: string,
+    longDescription: string,
+    status: string,
+    authors: string[],
+    categories: string[]
+}
 
 export type Action = { type: typeof GET_BOOKS, allBooks: Book[] } | { type: typeof SET_SELECTED_BOOK, selectedBook: Book };
 

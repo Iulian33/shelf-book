@@ -1,8 +1,8 @@
 // @flow
 import React from "react";
 import { connect } from "react-redux";
-import { Button, Modal } from "react-bootstrap";
 import { toggleModal } from "redux/modules/modal";
+import BaseModal from "components/Modals/Base";
 
 type State = {
     dispatch: ({ type: string }) => void,
@@ -13,20 +13,14 @@ const NewBookModal = ({dispatch, isOpen}: State) => {
     const handleClose = () => {dispatch(toggleModal('newBook',false))};
 
     return (
-        <Modal show={isOpen} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Add New Book</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-            <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                    Save Changes
-                </Button>
-            </Modal.Footer>
-        </Modal>
+        <BaseModal show={isOpen}
+                   onHide={handleClose}
+                   title='Add New Book'
+                   close={handleClose}
+                   action={handleClose}
+                   actionTitle='Save Changes'>
+            Add Book Body
+        </BaseModal>
     );
 };
 
