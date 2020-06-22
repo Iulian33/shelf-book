@@ -3,7 +3,6 @@ import { setCategories } from "redux/modules/categories";
 const booksMiddleware = store => next => action => {
     switch (action.type) {
         case "GET_BOOKS": {
-            console.log('loaded');
             const {books} = store.getState();
             const categories = [];
 

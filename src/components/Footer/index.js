@@ -28,7 +28,6 @@ type State = {
     darkMode: boolean,
 }
 
-
 const Footer = ({dispatch, darkMode}:State) => {
 
     const onDarkModeAction = () => {
