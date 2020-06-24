@@ -2,7 +2,7 @@
 import React from "react";
 import BookDetailsModal from "./BookDetails";
 import NewShelfModal from "./NewShelf";
-import ReviewModal from "components/Modals/Review";
+import ReviewModal from "./Review";
 
 const Modals = () => (
     <>

@@ -1,9 +1,7 @@
 // @flow
-
 const TOGGLE_MODAL = "TOGGLE_MODAL";
 
-export type Action =
-    | {
+export type Action = {
     type: typeof TOGGLE_MODAL,
     name: string,
     toggle: boolean

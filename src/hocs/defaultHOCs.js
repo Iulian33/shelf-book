@@ -1,5 +1,4 @@
 // @flow
-
 import React from "react";
 import { connect } from "react-redux";
 import { getBooks } from "redux/modules/books";
@@ -10,11 +9,11 @@ type Props = {
 };
 
 const defaultHOCs = (ComposedComponent: Function) => {
-
     const component = (props: Props) => {
         props.dispatch(getBooks(books));
         return <ComposedComponent {...props} />;
     };
+
     return connect()(component);
 };
 

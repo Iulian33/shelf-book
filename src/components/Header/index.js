@@ -21,7 +21,6 @@ type Props = {
 };
 
 const Header = ({dispatch, darkMode}: Props) => {
-
     const onAddShelve = () => {
         dispatch(toggleModal("newShelve", true))
     };

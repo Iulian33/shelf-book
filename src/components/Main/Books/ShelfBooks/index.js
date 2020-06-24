@@ -20,11 +20,10 @@ type State = {
 }
 
 const ShelfBooks = ({dispatch, books, selectedShelf}: State) => {
-
     const listShelfBooks = (books: Book[]) => {
         const shelfBooks = selectedShelf.books.map((bookId) => books.filter(book => book.id === bookId)[0]);
         return shelfBooks.length ? shelfBooks.map((book, index) => {
-            return <BookLayout key={index} book={book} />
+            return <BookLayout key={index} book={book}/>
         }) : <NoBooks/>;
     };
 
@@ -42,7 +41,7 @@ const ShelfBooks = ({dispatch, books, selectedShelf}: State) => {
     );
 };
 
-const mapStateToProps = ({ shelves, books}) => ({
+const mapStateToProps = ({shelves, books}) => ({
     selectedShelf: shelves.selectedShelf,
     books: books.allBooks
 });

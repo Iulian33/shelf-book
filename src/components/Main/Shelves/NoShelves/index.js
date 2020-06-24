@@ -1,8 +1,8 @@
 // @flow
 import React from "react";
 import { connect } from "react-redux";
-import styled from "styled-components";
 import { Button, Col } from "react-bootstrap";
+import styled from "styled-components";
 import { toggleModal } from "redux/modules/modal";
 
 const Container = styled(Col)`
@@ -23,7 +23,6 @@ type State = {
 }
 
 const NoShelves = ({dispatch, darkMode}: State) => {
-
     const onAddShelve = () => {
         dispatch(toggleModal("newShelve", true))
     };
@@ -31,9 +30,13 @@ const NoShelves = ({dispatch, darkMode}: State) => {
     return (
         <Container align={'center'}>
             <NoShelvesMessage darkMode={darkMode}>
-                Shelves list is empty <br/> Add your firs shelf !
+                Shelves list is empty <br/>
+                Add your firs shelf !
             </NoShelvesMessage>
-            <Button variant={darkMode ? 'light' : 'dark'} onClick={onAddShelve}>New Shelf</Button>
+            <Button variant={darkMode ? 'light' : 'dark'}
+                    onClick={onAddShelve}>
+                New Shelf
+            </Button>
         </Container>
     );
 };

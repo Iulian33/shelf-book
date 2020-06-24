@@ -24,7 +24,7 @@ export interface Book {
 }
 
 export type Action =
-    { type: typeof GET_BOOKS, allBooks: Book[] }
+      { type: typeof GET_BOOKS, allBooks: Book[] }
     | { type: typeof SET_SELECTED_BOOK, selectedBook: Book }
     | { type: typeof ADD_BOOK_REVIEW, name: string, message: string, bookId: number };
 
@@ -46,14 +46,12 @@ export default function reducer(state: State = initialState, action: Action): St
                 allBooks: action.allBooks
             };
         }
-
         case SET_SELECTED_BOOK: {
             return {
                 ...state,
                 selectedBook: action.selectedBook
             };
         }
-
         case ADD_BOOK_REVIEW: {
             const newBooks = state.allBooks.map((book) => {
                 if (action.bookId === book.id) {
@@ -69,6 +67,7 @@ export default function reducer(state: State = initialState, action: Action): St
                 }
                 return book;
             });
+
             return {
                 ...state,
                 allBooks: newBooks

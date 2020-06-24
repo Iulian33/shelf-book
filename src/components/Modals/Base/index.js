@@ -1,8 +1,8 @@
 // @flow
 import React from "react";
-import styled from "styled-components";
-import { Button, Modal, OverlayTrigger, Popover } from "react-bootstrap";
 import { connect } from "react-redux";
+import { Button, Modal, OverlayTrigger, Popover } from "react-bootstrap";
+import styled from "styled-components";
 
 const PopoverBody = styled(Popover.Content)`
   padding: 0;
@@ -11,7 +11,7 @@ const PopoverBody = styled(Popover.Content)`
 const StyledModal = styled(({darkMode, dispatch, ...rest}) => <Modal {...rest} />)`
   .modal-content {
     ${({darkMode}) =>
-    `background: ${darkMode ? '#252525' : '#fff'};
+        `background: ${darkMode ? '#252525' : '#fff'};
          color: ${darkMode ? '#cacaca' : '#000'};
     `}; 
   }
@@ -37,10 +37,25 @@ type Props = {
     darkMode: boolean
 };
 
-const BaseModal = ({title, close, action, actionTitle, children, darkMode, popOverTitle, popOver = false, popoverComponent, ...rest}: Props) => (
+const BaseModal = (
+    {
+        title,
+        close,
+        action,
+        actionTitle,
+        children,
+        darkMode,
+        popOverTitle,
+        popOver = false,
+        popoverComponent,
+        ...rest
+    }: Props
+) => (
     <StyledModal darkMode={darkMode} {...rest}>
         <Modal.Header closeButton>
-            <Modal.Title>{title}</Modal.Title>
+            <Modal.Title>
+                {title}
+            </Modal.Title>
         </Modal.Header>
         <Modal.Body>
             {children}
@@ -49,25 +64,28 @@ const BaseModal = ({title, close, action, actionTitle, children, darkMode, popOv
             <Button variant="danger" onClick={close}>
                 Close
             </Button>
-            {!popOver && (<Button variant="primary" onClick={action}>
-                {actionTitle}
-            </Button>)}
-            {popOver && (
-                <OverlayTrigger
-                    trigger="click"
-                    rootClose
-                    key="top"
-                    placement="top"
-                    overlay={(
-                        <Popover id={`popover-positioned-top`}>
-                            <Popover.Title as="h3">{popOverTitle}</Popover.Title>
-                            <PopoverBody>{popoverComponent}</PopoverBody>
-                        </Popover>
-                    )}
-                >
-                    <Button variant="primary">{actionTitle}</Button>
-                </OverlayTrigger>
-            )}
+            {!popOver ? (
+                    <Button variant="primary" onClick={action}>
+                        {actionTitle}
+                    </Button>)
+                : (
+                    <OverlayTrigger
+                        trigger="click"
+                        rootClose
+                        key="top"
+                        placement="top"
+                        overlay={(
+                            <Popover id={`popover-positioned-top`}>
+                                <Popover.Title as="h3">{popOverTitle}</Popover.Title>
+                                <PopoverBody>{popoverComponent}</PopoverBody>
+                            </Popover>
+                        )}>
+                        <Button variant="primary">
+                            {actionTitle}
+                        </Button>
+                    </OverlayTrigger>
+                )
+            }
         </Modal.Footer>
     </StyledModal>
 );

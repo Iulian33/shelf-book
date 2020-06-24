@@ -1,8 +1,8 @@
 // @flow
 import React from "react";
 import { connect } from "react-redux";
-import styled from "styled-components";
 import { Form, ListGroup } from "react-bootstrap";
+import styled from "styled-components";
 import type { Book } from "redux/modules/books";
 import type { Shelf } from "redux/modules/shelves";
 import { toggleBookToShelf } from "redux/modules/shelves";

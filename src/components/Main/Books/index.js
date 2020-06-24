@@ -11,7 +11,6 @@ type State = {
 }
 
 const Books = ({books}: State) => {
-
     const listBooks = (books: Book[]) => books.map((book, index) => {
         return <BookLayout key={index} book={book} />
     });

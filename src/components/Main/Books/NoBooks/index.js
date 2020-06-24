@@ -28,5 +28,4 @@ const mapStateToProps = ({app}) => ({
     darkMode: app.darkMode
 });
 
-
 export default connect(mapStateToProps)(NoBooks);

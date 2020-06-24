@@ -11,7 +11,6 @@ type Props = {
 
 const GlobalStyle = createGlobalStyle`
     ${reset};
-
     html {
         box-sizing: border-box;
     }

@@ -7,6 +7,7 @@ import BookPlaceholder from "assets/book-placeholder.png";
 import { toggleModal } from "redux/modules/modal";
 import { setSelectedBook } from "redux/modules/books";
 import type { Book } from "redux/modules/books";
+import { setOnReview } from "redux/modules/app";
 
 const BookContainer = styled.div`
   ${({darkMode}) =>
@@ -56,14 +57,13 @@ type State = {
 }
 
 const BookLayout = ({book, darkMode, dispatch}: State) => {
-
     const onMoreDetails = (book) => {
         dispatch(setSelectedBook(book));
         dispatch(toggleModal("bookDetails", true))
     };
 
     const onReview = (book) => {
-        dispatch(setSelectedBook(book));
+        dispatch(setOnReview(book));
         dispatch(toggleModal("review", true))
     };
 

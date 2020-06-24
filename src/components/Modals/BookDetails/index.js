@@ -2,13 +2,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Badge, Col, Row } from "react-bootstrap";
-import { toggleModal } from "redux/modules/modal";
 import BookPlaceholder from "assets/book-placeholder.png";
 import styled from "styled-components";
 import Icon from "components/Icon";
-import AddToShelf from "./AddToShelf";
 import BaseModal from "components/Modals/Base";
+import AddToShelf from "./AddToShelf";
 import type { Book } from "redux/modules/books";
+import { toggleModal } from "redux/modules/modal";
 
 const BookImage = styled.img`
   width: 100%;
@@ -47,7 +47,6 @@ type State = {
 }
 
 const BookDetailsModal = ({dispatch, isOpen, book}: State) => {
-
     const handleClose = () => {
         dispatch(toggleModal('bookDetails', false))
     };
@@ -68,12 +67,21 @@ const BookDetailsModal = ({dispatch, isOpen, book}: State) => {
                         <BookImage src={book.thumbnailUrl || BookPlaceholder} alt="Book Image"/>
                     </Col>
                     <Col sm={9}>
-                        <BookBadge variant="warning">ISBN: {book.isbn}</BookBadge>
-                        <BookBadge variant="primary">{book.pageCount} Pages</BookBadge>
+                        <BookBadge variant="warning">
+                            ISBN: {book.isbn}
+                        </BookBadge>
+                        <BookBadge variant="primary">
+                            {book.pageCount} Pages
+                        </BookBadge>
                         <Authors>
-                            Authors: <span> {book.authors.map((author, i) => book.authors.length === i + 1 ? author : author + ', ')}</span>
+                            Authors: {' '}
+                            <span>
+                                {book.authors.map((author, i) => book.authors.length === i + 1 ? author : author + ', ')}
+                            </span>
                         </Authors>
-                        <BDescription>{book.longDescription}</BDescription>
+                        <BDescription>
+                            {book.longDescription}
+                        </BDescription>
                         <CategoriesContainer>
                             <Icon name={'tag'}/>
                             <span> {book.categories.map((category, i) => book.categories.length === i + 1 ? category : category + ', ')}</span>

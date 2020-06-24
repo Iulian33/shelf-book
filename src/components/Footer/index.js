@@ -1,8 +1,8 @@
 // @flow
 import React from "react";
-import styled from "styled-components";
-import { Col, Container, Form, Row } from "react-bootstrap";
 import { connect } from "react-redux";
+import { Col, Container, Form, Row } from "react-bootstrap";
+import styled from "styled-components";
 import { changeThemeAction } from "redux/modules/app";
 
 const FooterContainer = styled.footer`
@@ -29,7 +29,6 @@ type State = {
 }
 
 const Footer = ({dispatch, darkMode}:State) => {
-
     const onDarkModeAction = () => {
         dispatch(changeThemeAction(!darkMode));
     };

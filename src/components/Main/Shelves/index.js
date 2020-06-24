@@ -4,11 +4,12 @@ import { connect } from "react-redux";
 import styled from "styled-components";
 import { Badge, Button, Col, OverlayTrigger, Popover, Row } from "react-bootstrap";
 import type { Shelf } from "redux/modules/shelves";
-import Icon from "components/Icon";
 import NoShelves from "components/Main/Shelves/NoShelves";
-import { selectShelf } from "redux/modules/shelves";
-import { changeMainLoadAction } from "redux/modules/app";
 import AddBooks from "components/Main/Shelves/AddBooks";
+import { selectShelf } from "redux/modules/shelves";
+import { changeMainLoadAction, setOnReview } from "redux/modules/app";
+import { toggleModal } from "redux/modules/modal";
+import Icon from "components/Icon";
 
 const ShelfContainer = styled.div`
   ${({darkMode}) =>
@@ -71,10 +72,14 @@ type State = {
 }
 
 const Shelves = ({shelves, dispatch, darkMode}: State) => {
-
     const onShelfSelected = (shelf: Shelf) => {
         dispatch(selectShelf(shelf));
         dispatch(changeMainLoadAction('shelfBooks'));
+    };
+
+    const onReviewShelf = (shelf: Shelf) => {
+        dispatch(setOnReview(shelf));
+        dispatch(toggleModal("review", true))
     };
 
     const listShelves = (shelves: Shelf[]) => shelves.map((shelf, index) => {
@@ -90,12 +95,18 @@ const Shelves = ({shelves, dispatch, darkMode}: State) => {
                             <span> {shelf.category || 'No Category'}</span>
                         </Category>
                         <Action sm={6}>
-                            <Button variant="info" onClick={() => {
-                                onShelfSelected(shelf)
-                            }}>
+                            <Button variant="info"
+                                    onClick={() => {
+                                        onShelfSelected(shelf)
+                                    }}>
                                 Load Shelf
                             </Button>
-                            <Button variant={darkMode ? 'light' : 'dark'}>Reviews</Button>
+                            <Button variant={darkMode ? 'light' : 'dark'}
+                                    onClick={() => {
+                                        onReviewShelf(shelf)
+                                    }}>
+                                Review
+                            </Button>
                         </Action>
                         <BooksCount sm={6} align={'right'}>
                             <OverlayTrigger
@@ -108,8 +119,7 @@ const Shelves = ({shelves, dispatch, darkMode}: State) => {
                                         <Popover.Title as="h3">Add Books</Popover.Title>
                                         <PopoverBody><AddBooks selectedShelf={shelf}/></PopoverBody>
                                     </Popover>
-                                )}
-                            >
+                                )}>
                                 <Button variant="primary">
                                     <IconContainer><Icon name='caretDown'/></IconContainer>
                                     Books <Badge variant="light">{shelf.books.length}</Badge>
@@ -121,6 +131,7 @@ const Shelves = ({shelves, dispatch, darkMode}: State) => {
             </Column>
         )
     });
+
     return (
         <Row>{shelves.length ? listShelves(shelves) : <NoShelves/>}</Row>
     );

@@ -1,12 +1,14 @@
 // @flow
 import React from "react";
 import { connect } from "react-redux";
+import { Col, Form, ListGroup, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { toggleModal } from "redux/modules/modal";
 import BaseModal from "components/Modals/Base";
 import type { Book, Review } from "redux/modules/books";
+import { toggleModal } from "redux/modules/modal";
 import { addBookReview } from "redux/modules/books";
-import { Col, Form, ListGroup, Row } from "react-bootstrap";
+import type { Shelf } from "redux/modules/shelves";
+import { addShelfReview } from "redux/modules/shelves";
 
 const Reviewer = styled.h3`
   font-weight: bold;
@@ -34,26 +36,30 @@ const NoReviewMessage = styled.p`
 
 type State = {
     dispatch: ({ type: string }) => void,
-    selectedBook: Book,
+    onReview: Shelf | Book,
     isOpen: boolean,
     darkMode: boolean
 }
 
-const ReviewModal = ({dispatch, isOpen, selectedBook, darkMode}: State) => {
-
+const ReviewModal = ({dispatch, isOpen, onReview, darkMode}: State) => {
     const newReview: Review = {};
+
     const handleClose = () => {
         dispatch(toggleModal('review', false))
     };
+
     const onAddReview = () => {
         if (newReview.name && newReview.message) {
-            dispatch(addBookReview(newReview.name, newReview.message, selectedBook.id));
+            dispatch(onReview.id
+                ? addBookReview(newReview.name, newReview.message, onReview.id)
+                : addShelfReview(newReview.name, newReview.message, onReview.name)
+            );
             document.getElementById("review-form").reset();
         }
     };
 
-    const listReviews = () => Object.keys(selectedBook).length && (
-        selectedBook.reviews.length ? selectedBook.reviews.map((review: Review, idx) => (
+    const listReviews = () => Object.keys(onReview).length && (
+        onReview.reviews.length ? onReview.reviews.map((review: Review, idx) => (
             <ListItem key={idx}>
                 <ReviewBlock darkMode={darkMode}>
                     <Col sm={3}>
@@ -70,15 +76,13 @@ const ReviewModal = ({dispatch, isOpen, selectedBook, darkMode}: State) => {
     return (
         <BaseModal show={isOpen}
                    onHide={handleClose}
-                   title={`Review "${selectedBook.title}" `}
+                   title={`Review "${onReview.title || onReview.name}" `}
                    close={handleClose}
                    action={onAddReview}
                    actionTitle={`Add Review`}>
             <ListGroup variant="flush">
                 {listReviews()}
-                <Form id="review-form" onSubmit={(e) => {
-                    e.preventDefault()
-                }}>
+                <Form id="review-form" onSubmit={(e) => {e.preventDefault()}}>
                     <Form.Row>
                         <Col>
                             <NameControl placeholder="Name"
@@ -102,9 +106,9 @@ const ReviewModal = ({dispatch, isOpen, selectedBook, darkMode}: State) => {
     );
 };
 
-const mapStateToProps = ({modal, books, app}) => ({
+const mapStateToProps = ({modal, app}) => ({
     isOpen: modal.review,
-    selectedBook: books.selectedBook,
+    onReview: app.onReview,
     darkMode: app.darkMode
 });
 

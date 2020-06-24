@@ -8,7 +8,6 @@ import Shelves from "components/Main/Shelves";
 import ShelfBooks from "components/Main/Books/ShelfBooks";
 import type { Shelf } from "redux/modules/shelves";
 
-
 const MainTitle = styled.h1`
   font-size: 38px;
   text-align: center;

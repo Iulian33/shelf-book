@@ -22,6 +22,7 @@ type State = {
 
 const NewShelfModal = ({dispatch, isOpen, categories, shelves}: State) => {
     const newShelf: Shelf = {};
+
     const handleClose = () => {
         dispatch(toggleModal('newShelve', false))
     };
@@ -39,7 +40,7 @@ const NewShelfModal = ({dispatch, isOpen, categories, shelves}: State) => {
             return shelf.name === storeShelf.name
         });
         if (shelf.name && !isShelfSore.length) {
-            shelf.books = [];
+            shelf.books = shelf.reviews = [];
             dispatch(addShelf(shelf));
             dispatch(toggleModal('newShelve', false));
             dispatch(changeMainLoadAction('allShelves'));
@@ -61,10 +62,15 @@ const NewShelfModal = ({dispatch, isOpen, categories, shelves}: State) => {
                        onAddShelf(newShelf)
                    }}
                    actionTitle='Add Shelf'>
-            <Form>
+            <Form onSubmit={(e) => {e.preventDefault()}}>
                 <Form.Group>
                     <FormLine>
-                        <Col><Form.Control type="text" placeholder="Shelf Name" onKeyUp={onTypeName}/></Col>
+                        <Col>
+                            <Form.Control
+                                type="text"
+                                placeholder="Shelf Name"
+                                onKeyUp={onTypeName}/>
+                        </Col>
                     </FormLine>
                     <FormLine>
                         <Col>

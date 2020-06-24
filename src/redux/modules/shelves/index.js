@@ -1,18 +1,21 @@
 // @flow
-import type { Book } from "redux/modules/books";
+import type { Book, Review } from "redux/modules/books";
 
 const ADD_SHELF = "ADD_SHELF";
+const ADD_SHELF_REVIEW = "ADD_SHELF_REVIEW";
 const TOGGLE_BOOK_TO_SHELF = "TOGGLE_BOOK_TO_SHELF";
 const SELECT_SHELF = "SELECT_SHELF";
 
 export type Shelf = {
     name: string,
     category?: string,
-    books: Book[]
+    books: Book[],
+    reviews: Review[]
 }
 
 export type Action =
-    { type: typeof ADD_SHELF, shelf: Shelf }
+      { type: typeof ADD_SHELF, shelf: Shelf }
+    | { type: typeof ADD_SHELF_REVIEW, name: string, message: string, shelfName: string }
     | { type: typeof TOGGLE_BOOK_TO_SHELF, bookID: number, shelfName: string, toggle: boolean }
     | { type: typeof SELECT_SHELF, shelf: Shelf }
 
@@ -32,6 +35,26 @@ export default function reducer(state: State = initialState, action: Action): St
             return {
                 ...state,
                 allShelves: [...state.allShelves, action.shelf]
+            };
+        }
+        case ADD_SHELF_REVIEW: {
+            const newShelves = state.allShelves.map((shelf) => {
+                if (action.shelfName === shelf.name) {
+                    return {
+                        ...shelf,
+                        reviews: [
+                            ...shelf.reviews, {
+                                name: action.name,
+                                message: action.message
+                            }
+                        ]
+                    }
+                }
+                return shelf;
+            });
+            return {
+                ...state,
+                allShelves: newShelves
             };
         }
         case TOGGLE_BOOK_TO_SHELF: {
@@ -63,6 +86,7 @@ export default function reducer(state: State = initialState, action: Action): St
                 selectedShelf: action.shelf
             };
         }
+
         default: {
             return state;
         }
@@ -72,6 +96,13 @@ export default function reducer(state: State = initialState, action: Action): St
 export const addShelf = (shelf: Shelf): Action => ({
     type: ADD_SHELF,
     shelf
+});
+
+export const addShelfReview = (name: string, message: string, shelfName: string): Action => ({
+    type: ADD_SHELF_REVIEW,
+    name,
+    message,
+    shelfName
 });
 
 export const selectShelf = (shelf: Shelf): Action => ({
