@@ -61,7 +61,7 @@ const BookDetailsModal = ({dispatch, isOpen, book}: State) => {
                    popoverComponent={<AddToShelf/>}
                    popOverTitle={'Add Book to Shelf'}
                    close={handleClose}
-                   actionTitle='Add to Shelve'>
+                   actionTitle='Add to Shelves'>
             {Object.keys(book).length && (
                 <Row>
                     <Col sm={3}>

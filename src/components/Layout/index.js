@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
     
     .custom-select {
       background: ${({darkMode}) => (darkMode ? '#252525' : '#fff')};
+      color: ${({darkMode}) => (darkMode ? '#fff' : '#000')};
     }
     
     .form-control{

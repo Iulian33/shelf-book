@@ -11,14 +11,14 @@ export type Action =
 
 export type State = {
     newShelve: boolean,
-    newBook: boolean,
-    bookDetails: boolean
+    bookDetails: boolean,
+    review: boolean
 };
 
 const initialState: State = {
     newShelve: false,
-    newBook: false,
-    bookDetails: false
+    bookDetails: false,
+    review: false
 };
 
 export default function reducer(state: State = initialState, action: Action): State {
@@ -29,7 +29,6 @@ export default function reducer(state: State = initialState, action: Action): St
                 [action.name]: action.toggle
             };
         }
-
         default: {
             return state;
         }

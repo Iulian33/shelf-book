@@ -4,16 +4,9 @@ import styled from "styled-components";
 import { Button, Modal, OverlayTrigger, Popover } from "react-bootstrap";
 import { connect } from "react-redux";
 
-type Props = {
-    title: string,
-    close: () => {},
-    action: Object,
-    actionTitle: string,
-    popOver: boolean,
-    popoverComponent?: any,
-    popOverTitle: string,
-    darkMode: boolean
-};
+const PopoverBody = styled(Popover.Content)`
+  padding: 0;
+`;
 
 const StyledModal = styled(({darkMode, dispatch, ...rest}) => <Modal {...rest} />)`
   .modal-content {
@@ -33,6 +26,17 @@ const StyledModal = styled(({darkMode, dispatch, ...rest}) => <Modal {...rest} /
   }
 `;
 
+type Props = {
+    title: string,
+    close: () => {},
+    action: Object,
+    actionTitle: string,
+    popOver: boolean,
+    popoverComponent?: any,
+    popOverTitle: string,
+    darkMode: boolean
+};
+
 const BaseModal = ({title, close, action, actionTitle, children, darkMode, popOverTitle, popOver = false, popoverComponent, ...rest}: Props) => (
     <StyledModal darkMode={darkMode} {...rest}>
         <Modal.Header closeButton>
@@ -51,14 +55,13 @@ const BaseModal = ({title, close, action, actionTitle, children, darkMode, popOv
             {popOver && (
                 <OverlayTrigger
                     trigger="click"
+                    rootClose
                     key="top"
                     placement="top"
                     overlay={(
                         <Popover id={`popover-positioned-top`}>
                             <Popover.Title as="h3">{popOverTitle}</Popover.Title>
-                            <Popover.Content>
-                                {popoverComponent}
-                            </Popover.Content>
+                            <PopoverBody>{popoverComponent}</PopoverBody>
                         </Popover>
                     )}
                 >

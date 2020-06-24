@@ -7,6 +7,7 @@ import styled from "styled-components";
 import BaseModal from "components/Modals/Base";
 import type { Shelf } from "redux/modules/shelves";
 import { addShelf } from "redux/modules/shelves";
+import { changeMainLoadAction } from "redux/modules/app";
 
 const FormLine = styled(Form.Row)`
   margin: 15px 0;
@@ -41,6 +42,7 @@ const NewShelfModal = ({dispatch, isOpen, categories, shelves}: State) => {
             shelf.books = [];
             dispatch(addShelf(shelf));
             dispatch(toggleModal('newShelve', false));
+            dispatch(changeMainLoadAction('allShelves'));
         }
     };
 

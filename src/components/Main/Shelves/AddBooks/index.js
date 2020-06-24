@@ -3,30 +3,31 @@ import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { Form, ListGroup } from "react-bootstrap";
-import type { Shelf } from "redux/modules/shelves";
 import type { Book } from "redux/modules/books";
+import type { Shelf } from "redux/modules/shelves";
 import { toggleBookToShelf } from "redux/modules/shelves";
 
-const NoShelfMessage = styled.p`
-  font-weight: bold;
+const BooksList = styled(Form)`
+  max-height: 300px;
+  overflow: auto;
 `;
 
 type State = {
     dispatch: ({ type: string }) => void,
-    shelves: Shelf[],
-    selectedBook: Book
+    books: Book[],
+    selectedShelf: Shelf
 }
 
-const AddToShelf = ({shelves, selectedBook, dispatch}: State) => {
-    const onShelfSelected = (event) => {
+const AddBooks = ({books, dispatch,selectedShelf}: State) => {
+    const onBookSelected = (event, book) => {
         dispatch(toggleBookToShelf(
-            selectedBook.id,
-            event.target.value,
+            book.id,
+            selectedShelf.name,
             event.target.checked
         ));
     };
 
-    const isShelfAvailable = (shelfCategory, selectedBookCategories) => {
+    const isBookAvailable = (shelfCategory, selectedBookCategories) => {
         let isAvailable: boolean;
         if (shelfCategory && shelfCategory !== 'No Category') {
             const categories = selectedBookCategories.filter((category) => shelfCategory === category);
@@ -38,18 +39,18 @@ const AddToShelf = ({shelves, selectedBook, dispatch}: State) => {
     };
 
     const listShelves = () => {
-        return shelves.map((shelf, idx) => {
-            const selectedShelf = shelf.books.filter((bookId) => selectedBook.id === bookId);
+        return books.map((book, idx) => {
+            const selectedBook = selectedShelf.books.filter(bookId => bookId === book.id);
             return (
                 <ListGroup.Item key={idx}>
                     <Form.Check
                         custom
-                        checked={!!selectedShelf.length}
-                        disabled={!isShelfAvailable(shelf.category, selectedBook.categories)}
-                        onChange={onShelfSelected}
+                        checked={!!selectedBook.length}
+                        disabled={!isBookAvailable(selectedShelf.category, book.categories)}
+                        onChange={(event) => {onBookSelected(event,book)}}
                         type="checkbox"
-                        value={shelf.name}
-                        label={shelf.name}
+                        value={book.title}
+                        label={book.title}
                         id={`${idx}-checkbox`}
                     />
                 </ListGroup.Item>
@@ -58,18 +59,16 @@ const AddToShelf = ({shelves, selectedBook, dispatch}: State) => {
     };
 
     return (
-        <Form>
+        <BooksList>
             <ListGroup variant="flush">
                 {listShelves()}
             </ListGroup>
-            {!shelves.length && <NoShelfMessage>No shelves added yet!</NoShelfMessage>}
-        </Form>
+        </BooksList>
     );
 };
 
-const mapStateToProps = ({shelves, books}) => ({
-    shelves: shelves.allShelves,
-    selectedBook: books.selectedBook
+const mapStateToProps = ({books}) => ({
+    books: books.allBooks
 });
 
-export default connect(mapStateToProps)(AddToShelf);
+export default connect(mapStateToProps)(AddBooks);

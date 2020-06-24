@@ -1,9 +1,10 @@
 // @flow
 import React from "react";
-import { Button, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { toggleModal } from "redux/modules/modal";
+import { changeMainLoadAction } from "redux/modules/app";
 
 const AppNav = styled(({ darkMode, ...rest }) => <Navbar {...rest} />)`
   background: ${({darkMode}) => (darkMode ? '#252525' : '#eaf3f7')};
@@ -21,19 +22,14 @@ type Props = {
 
 const Header = ({dispatch, darkMode}: Props) => {
 
-    const onAddBook = () => {
-        dispatch(toggleModal("newBook", true))
-    };
     const onAddShelve = () => {
         dispatch(toggleModal("newShelve", true))
     };
-
     const onLoadBooks = () => {
-        alert('load Books');
+        dispatch(changeMainLoadAction('allBooks'));
     };
-
     const onLoadShelves = () => {
-        alert('load Shelves');
+        dispatch(changeMainLoadAction('allShelves'));
     };
 
     return (
@@ -43,12 +39,9 @@ const Header = ({dispatch, darkMode}: Props) => {
             <Navbar.Collapse>
                 <Nav className="mr-auto">
                     <Nav.Link onClick={onLoadBooks}>All Books</Nav.Link>
-                    <NavDropdown title="Shelves" id="shelf-dropdown">
-                        <NavDropdown.Item onClick={onLoadShelves}>All Shelves</NavDropdown.Item>
-                        <NavDropdown.Item onClick={onAddShelve}>Add Shelf</NavDropdown.Item>
-                    </NavDropdown>
+                    <Nav.Link onClick={onLoadShelves}>All Shelves</Nav.Link>
                 </Nav>
-                <Button variant="primary" onClick={onAddBook}>Add New Book</Button>
+                <Button variant="primary" onClick={onAddShelve}>Add Shelf</Button>
             </Navbar.Collapse>
         </AppNav>
     );
